@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Hurly-Burly';
+    src: url('../fonts/Hurly-Burly.ttf');
+}
+
+html{
+	font-family: 'Hurly-Burly';
+	height: 100%;
+}
+
+h1{
+	color: white;
+	font-size: 2.5em;
+	letter-spacing: 0.1em;
+}
+
+h2{
+
+}
+
+body, .btn{
+	background-color: #2CB4B4;
+}
+
+body{
+	height: 100%;
+	text-align: center;
+	margin: 0;
+	overflow: hidden;
+	background-image: url(../images/bg3.png), url(../images/bg4.png), url(../images/bg5.png);
+	background-attachment: fixed;
+	overflow: auto;
+	background-size: auto 100%;
+}
+
+.btn{
+	color: white;
+	display: inline-block;
+	margin: 5px;
+	padding: 1em 0.5em;
+	text-decoration: none;
+	width: 10em;
+	height: 2em;
+
+}
+
+#header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+#header h1{
+	background-image: url("../images/website_header.png");
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+
+	padding-top: 0.5em;
+	padding-bottom: 2.5em;
+	margin: 0;
+}
+
+#header h1:before, #header h1:after{
+	display: block;
+	content:'';
+	position: absolute;
+	top: -0.6em;
+	width: 4em;
+	height: 4em;
+
+	background-image: url("../images/PureBread-logo_circle.png");
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+	border-radius: 50%;
+}
+#header h1:before{
+	left: -0.6em;
+}
+#header h1:after{
+	right: -0.6em;
+}
+
+#navbar{
+	width: 100%;
+	position: fixed;
+	background-image: url("../images/website_footer.png");
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+	background-position: center;
+	padding-top: 4em;
+	padding-bottom: 1em;
+
+	bottom: 0;
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#content-wrapper{
+	background-color: #68EDED;
+	margin: 12em auto 0 auto;
+	width: 70%;
+	height: 100%;
+    padding-bottom: 10em;
+    position: relative;
+    max-width: 870px;
+}
+
+.fadeout {
+    display: block;
+    height: 10em;
+    content: '';
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #000));
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.fadein {
+    display: block;
+    height: 12em;
+    content: '';
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #000),color-stop(1, transparent));
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#content{
+    height: 100%;
+	padding: 10px 10%;
+	box-sizing: border-box;
+}
+
+#content p{
+	text-align: justify;
+}
+
+#about{
+
+}
+
+#media{
+
+}
