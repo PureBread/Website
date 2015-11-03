@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hurly-Burly';
-    src: url('../fonts/Hurly-Burly.ttf');
+    src: url('../fonts/Hurly-Burly-v2.ttf');
 }
 
 html{
@@ -46,35 +46,20 @@ body{
 	background-image: url(../images/bg3.png);
 }
 
-.panel{
-	min-width: 100%;
-	height: 98%;
-	overflow-y: auto;
-	overflow-x: hidden;
-	margin-top: -150%;
-	position: absolute;
-	background: #000;
-	box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
-	z-index: 2;
-	-webkit-transition: all .8s ease-in-out;
-	-moz-transition: all .8s ease-in-out;
-	-o-transition: all .8s ease-in-out;
-	transition: all .8s ease-in-out;
-}
-
 .page{
-	overflow-y: auto;
-	overflow-x: auto;
-	position: absolute;
-	z-index: 1;
 	opacity: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
 	-webkit-transition: opacity .8s ease-in-out;
 	-moz-transition: opacity .8s ease-in-out;
 	-o-transition: opacity .8s ease-in-out;
 	transition: opacity .8s ease-in-out;
 }
-.page:target{
-	opacity: 100%;
+.anchor:target + .page{
+	opacity: 1;
+	height: 100%;
+	position: relative;
 }
 
 .parallax{
@@ -231,7 +216,6 @@ body{
 	background-color: #68EDED;
 	margin: 12em auto 0 auto;
 	width: 70%;
-	height: 100%;
     padding-bottom: 10em;
     position: relative;
     max-width: 870px;
@@ -263,6 +247,26 @@ body{
 	box-sizing: border-box;
 }
 
+#content h2{
+	position:relative;
+}
+#content h2:before{ 
+	content: '';
+	position:absolute; top:-5em;
+}
+
+.anchor{
+  display: block;
+  height: 5em; /*same height as header*/
+  margin-top: -5em; /*same height as header*/
+  visibility: hidden;
+}
+
+#content img{
+	width: 100%;
+	height: auto;
+}
+
 #content p{
 	text-align: justify;
 }
@@ -271,6 +275,10 @@ body{
 
 }
 
+#team-pics img{
+	max-width: 25%;
+	box-sizing: border-box;
+}
 #media{
 
 }

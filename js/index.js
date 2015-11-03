@@ -8,4 +8,6 @@ $(document).ready(function(){
     var offset = xMouse - xCenter;
     $("#parallax").css({"background-position-x": -offset*0.03 + "px," +  -offset*0.02 + "px," + -offset*0.01 + "px" });//foreground
    });
+
+  
 });
