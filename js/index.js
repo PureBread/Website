@@ -5,18 +5,13 @@ $(document).ready(function(){
   $(document).mousemove(function(e){
     parallax(e);
    });
-  /*
-  $("#gameplayVideo").mousemove(function(e){
-    parallax(e);
-   });
-*/
-  
 
   $(".btn").click(function(e){
   	transition($(this).attr("href"));
   });
 
   $( window ).on("hashchange", function() {
+  	$('video').get(0).pause();
   	transition(window.location.hash);
   });
 
