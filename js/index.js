@@ -3,12 +3,14 @@
 -----------------------------------------------------------------------*/
 $(document).ready(function(){
   $(document).mousemove(function(e){
-    var xMouse = e.pageX;
-    var xCenter = $(window).width()/2;
-    var offset = xMouse - xCenter;
-    $("#parallax").css({"background-position-x": -offset*0.03 + "px," +  -offset*0.02 + "px," + -offset*0.01 + "px" });//foreground
+    parallax(e);
    });
-
+  /*
+  $("#gameplayVideo").mousemove(function(e){
+    parallax(e);
+   });
+*/
+  
 
   $(".btn").click(function(e){
   	transition($(this).attr("href"));
@@ -19,6 +21,17 @@ $(document).ready(function(){
   });
 
 });
+
+function parallax(e){
+	var xMouse = e.pageX;
+    var yMouse = e.pageY;
+    var xCenter = $(window).width()/2;
+    var yCenter = $(window).height()/2;
+    var offsetH = (xMouse - xCenter) * 4;
+    var offsetV = (yMouse - yCenter) * 4;
+    $("#parallax").css({"background-position-x": -offsetH*0.04 + "px," +  -offsetH*0.02 + "px," + -offsetH*0.01 + "px" });//foreground
+    $("#parallax").css({"background-position-y": -offsetV*0.04 + "px," +  -offsetV*0.02 + "px," + -offsetV*0.01 + "px" });
+}
 
 function transition(hash){
 	$(".page, .anchor").removeClass("active");

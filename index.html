@@ -3,9 +3,11 @@
 <head>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 </head>
 <body>
+
 	<div id="parallax" class="parallax"></div>
 
 	<div id="content-wrapper">
@@ -13,9 +15,11 @@
 			<span class="anchor" id="media"></span>
 			<div id="media-content" class="page active">
 				<h2>Gameplay Video</h2>
-				<div class="video-wrapper">
-					<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/eAR3erZ3DrA?showinfo=0" frameborder="0" allowfullscreen></iframe>
-				</div>
+				<video id="gameplayVideo" controls src="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4" autoplay poster="posterimage.jpg">
+				  Sorry, your browser doesn't support embedded videos, 
+				  but don't worry, you can <a href="videofile.ogg">download it</a>
+				  and watch it with your favorite video player!
+				</video>
 				<h2>Screenshots</h2>
 				<img src="images/ui-menus.png"/>
 				<img src="images/resources-ui.png"/>
@@ -32,11 +36,7 @@
 				<img src="images/rio-de-janeiro.png"/>
 				<h2>The Team</h2>
 				<p>llammigration is a game by PureBread, a team of students from carleton university's interactive multimedia and design program. the team's members are cat wong, emma thurlow, sean leblanc, and vishesh thanki.</p>
-				<div id="team-pics">
-					<img src="images/GroupPics/cat.png"/>
-					<img src="images/GroupPics/sean.png"/>
-					<img src="images/GroupPics/emma.png"/>
-				</div>
+				<img src="images/GroupPics/portraits.gif"/>
 			</div>
 		</div>
 	</div>
@@ -50,5 +50,7 @@
 			<a class="btn" href="https://sweetheartsquad.itch.io/">BUY THE GAME</a>
 			<a class="btn" href="#media">MEDIA</a>
 			<a class="btn" href="#about">ABOUT</a>
-	</div></body>
+	</div>
+</body>
+
 </html>
