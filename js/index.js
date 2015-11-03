@@ -21,8 +21,7 @@ $(document).ready(function(){
 });
 
 function transition(hash){
-	$(".page").removeClass("active");
-	$(hash).addClass("active");
-  	//window.location.hash = hash;
+	$(".page, .anchor").removeClass("active");
+	$(hash + ", " + hash + "-content").addClass("active");
   	$(window).scrollTop();
 }

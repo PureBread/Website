@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hurly-Burly';
-    src: url('../fonts/Hurly-Burly-v5.ttf');
+    src: url('../fonts/Hurly-Burly-v6.ttf');
 }
 
 html{
@@ -49,27 +49,29 @@ body{
 .page{
 	opacity: 0;
 	height: 0;
-	position: absolute;
 	top: 0;
+	padding: 0;
+	overflow: hidden;
 	-webkit-transition: opacity .8s ease-in-out;
 	-moz-transition: opacity .8s ease-in-out;
 	-o-transition: opacity .8s ease-in-out;
 	transition: opacity .8s ease-in-out;
 }
 
-.page:before { 
-	content: ''; 
-	display: block; 
-	position: relative; 
-	width: 0; 
-	height: 10em; 
-	margin-top: -10em;
+.anchor{
+  display: block;
+  height: 12em; /*same height as header*/
+  margin-top: -12em; /*same height as header*/
+  visibility: hidden;
+  display: none;
+}
+.anchor.active{
+  display: visible;
 }
 
 .page.active {
 	opacity: 1;
 	height: 100%;
-	position: relative;
 }
 
 .parallax{
@@ -128,7 +130,7 @@ body{
 	background-size: 60%;
 	border-radius: 50%;
 
-	-webkit-animation-duration:         4s; 
+	-webkit-animation-duration:         3s; 
 	-webkit-animation-iteration-count:  infinite;
 	-webkit-animation-timing-function: linear;
 }
@@ -255,22 +257,6 @@ body{
     height: 100%;
 	padding: 10px 10%;
 	box-sizing: border-box;
-}
-
-#content h2{
-	position:relative;
-}
-#content h2:before{ 
-	content: '';
-	position:absolute; top:-5em;
-}
-
-
-.anchor{
-  display: block;
-  height: 5em; /*same height as header*/
-  margin-top: -5em; /*same height as header*/
-  visibility: hidden;
 }
 
 #content img{
