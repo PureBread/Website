@@ -29,7 +29,9 @@ function parallax(e){
 }
 
 function transition(hash){
-	$(".page, .anchor").removeClass("active");
-	$(hash + ", " + hash + "-content").addClass("active");
-  	$(window).scrollTop();
+  if($(hash)){
+  	$(".page, .anchor").removeClass("active");
+  	$(hash + ", " + hash + "-content").addClass("active");
+    $(window).scrollTop();
+  }
 }

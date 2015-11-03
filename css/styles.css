@@ -172,7 +172,7 @@ body{
     background-image: url("../images/bg1.png"), url("../images/bg2.png");
     background-size: auto 100%;
     background-repeat: repeat-x;
-    background-position: center;
+    background-position: center 5px;
     padding: 4em 20% 1em 20%;
     box-sizing: border-box;
     bottom: 0;
