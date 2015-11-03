@@ -9,5 +9,20 @@ $(document).ready(function(){
     $("#parallax").css({"background-position-x": -offset*0.03 + "px," +  -offset*0.02 + "px," + -offset*0.01 + "px" });//foreground
    });
 
-  
+
+  $(".btn").click(function(e){
+  	transition($(this).attr("href"));
+  });
+
+  $( window ).on("hashchange", function() {
+  	transition(window.location.hash);
+  });
+
 });
+
+function transition(hash){
+	$(".page").removeClass("active");
+	$(hash).addClass("active");
+  	//window.location.hash = hash;
+  	$(window).scrollTop();
+}

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Hurly-Burly';
-    src: url('../fonts/Hurly-Burly-v2.ttf');
+    src: url('../fonts/Hurly-Burly-v5.ttf');
 }
 
 html{
@@ -56,7 +56,8 @@ body{
 	-o-transition: opacity .8s ease-in-out;
 	transition: opacity .8s ease-in-out;
 }
-.anchor:target + .page{
+
+.page.active {
 	opacity: 1;
 	height: 100%;
 	position: relative;
@@ -254,6 +255,7 @@ body{
 	content: '';
 	position:absolute; top:-5em;
 }
+
 
 .anchor{
   display: block;
