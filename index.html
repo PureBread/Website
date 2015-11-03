@@ -2,6 +2,8 @@
 <html>
 <head>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -46,10 +48,19 @@
 	<div id="header">
 		<h1>LLAMMIGRATION</h1>
 	</div>
-	<div id="navbar">
-			<a class="btn" href="https://sweetheartsquad.itch.io/">BUY THE GAME</a>
-			<a class="btn" href="#media">MEDIA</a>
-			<a class="btn" href="#about">ABOUT</a>
+	<img id="llama_left" class="llamas" src="images/llama_left.png"/>
+	<img id="llama_right" class="llamas" src="images/llama_right.png"/>
+	<div id="footer">
+		<div id="navbar-wrapper">
+			<div id="navbar">
+				<div class="abs-center">
+					<a id="btnShowNavbar" href="javascript:void(0)">^</a>
+				</div>
+				<a class="btn" href="https://sweetheartsquad.itch.io/">BUY THE GAME</a>
+				<a class="btn" href="#media">MEDIA</a>
+				<a class="btn" href="#about">ABOUT</a>
+			</div>
+		</div>
 	</div>
 </body>
 
