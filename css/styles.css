@@ -239,6 +239,8 @@ body{
 #gameplayVideo{
 	width: 100%    !important;
   	height: auto   !important;
+  	background: black;
+  	cursor: pointer;
 }
 
 #content-wrapper{

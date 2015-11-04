@@ -9,6 +9,8 @@ $(document).ready(function(){
     parallax(e);
    });
 
+  transition();
+  
   // Page transitions
   $(".btn").click(function(e){
   	transition($(this).attr("href"));
@@ -16,7 +18,7 @@ $(document).ready(function(){
 
   $( window ).on("hashchange", function() {
   	$('video').get(0).pause();
-  	transition(window.location.hash);
+  	transition();
   });
 
   // Smooth scroll
@@ -84,7 +86,14 @@ function parallax(e){
     $("#parallax").css({"background-position-y": -offsetV*0.04 + "px," +  -offsetV*0.02 + "px," + -offsetV*0.01 + "px" });
 }
 
-function transition(hash){
+function transition(){
+  var hash = window.location.hash;
+
+  if(hash != "#media" && hash != "#about"){
+    window.location.hash = "#media";
+    return false;
+  }
+  
   if($(hash)){
   	$(".page, .anchor").removeClass("active");
   	$(hash + ", " + hash + "-content").addClass("active");
