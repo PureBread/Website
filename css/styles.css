@@ -167,26 +167,15 @@ body{
   }
 }
 
-#btnShowNavbar{
-	display: none;
-  padding: 1em 1.5em;
-  background-image: url(../images/Button/button-01.png);
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: white;
-  top: -1em;
-}
 
-#footer{
-	width: 100%;
+#footer {
+  width: 100%;
+  height: 12em;
   position: fixed;
   background-image: url(../images/bg1.png), url(../images/bg2.png);
   background-size: auto 100%;
   background-repeat: repeat-x, repeat-x;
   background-position: center 5px, center 5px;
-  padding: 4em 20% 1em 20%;
   box-sizing: border-box;
   bottom: 0;
   image-rendering: pixelated;
@@ -194,7 +183,7 @@ body{
 
 #navbar-wrapper {
   display: inline-block;
-  
+  width: 35em;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -210,6 +199,7 @@ body{
   padding: 1.8em;
   overflow: visible;
   left: -50%;
+    width: 100%;
 }
 
 #navbar.slide-down {
@@ -240,16 +230,10 @@ body{
 
 #llama_left{
 	left: 2%;
-	/*background-image: url("../images/llama_left.png");
-	background-position: right;
-	*/
 }
 
 #llama_right{
 	right: 2%;
-	/*
-	background-image: url("../images/llama_right.png");
-	*/
 }
 
 #gameplayVideo{

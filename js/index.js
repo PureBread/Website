@@ -2,7 +2,6 @@ var wheel = false;
 var docH;
 var scrollTop;
 var page;
-var btnsHeight = 0;
 
 $(document).ready(function(){
   // Parallax
@@ -46,39 +45,11 @@ $(document).ready(function(){
       return false;
   });
 
-  $("#btnShowNavbar").on("click", function(){
-    $("#navbar").toggleClass("slide-down");
-  });
-
 });
-
-$(window).load(function () {
-    // Fluid Navbar
-  calculateBtnsWidth();
-
-  $("#navbar .btn").on("resize", function(){
-    calculateBtnsWidth();
-  });
-
-  responsiveNavbar();
-  $(window).on("resize", function(){
-    responsiveNavbar();
-  });
-});
-
-function responsiveNavbar(){
-  if($("#navbar").height() - btnsHeight > 1){
-    $("#navbar").addClass("slide-down");
-    $("#btnShowNavbar").css("display", "block");
-  }else{
-    $("#navbar").removeClass("slide-down");
-    $("#btnShowNavbar").css("display", "none");
-  }
-}
 
 function calculateBtnsWidth(){
   $("#navbar .btn").each(function(index) {
-    btnsHeight = Math.max(btnsHeight, parseInt($(this).outerHeight(true), 10));
+    btnsWidth += parseInt($(this).outerWidth(true), 10);
   });
 }
 
