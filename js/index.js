@@ -46,6 +46,21 @@ $(document).ready(function(){
       return false;
   });
 
+  $("#gameplayVideo").on("click", function(e){
+    // From: http://stackoverflow.com/questions/5278262/click-the-poster-image-the-html5-video-plays
+    
+    // get click position 
+        var clickY = (e.pageY - $(this).offset().top);
+        var height = parseFloat( $(this).height() );
+
+        // avoids interference with controls
+        if(clickY > 0.82*height) return;
+
+        // toggles play / pause
+        this.paused ? this.play() : this.pause();
+
+  });
+
 });
 
 function parallax(e){
