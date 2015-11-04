@@ -1,7 +1,7 @@
 var wheel = false;
 var docH;
 var scrollTop;
-var page;
+var scrollElement;
 
 $(document).ready(function(){
   // Parallax
@@ -21,6 +21,7 @@ $(document).ready(function(){
 
   // Smooth scroll
   page = $("body");
+  scrollElement = $('WebkitAppearance' in document.documentElement.style ? "body" : "html");
 
   $scrollTop = $(window).scrollTop();
 
@@ -37,7 +38,7 @@ $(document).ready(function(){
       var docH = $(document).height() - $(window).height();
 
       $scrollTop = Math.min(docH, Math.max(0, parseInt($scrollTop - delta * 300)));
-      $("body").stop(true, false).animate({
+      scrollElement.stop(true, false).animate({
           scrollTop: $scrollTop + 'px'
       }, 500, 'easeOutCubic', function() {
           wheel = false;
@@ -46,12 +47,6 @@ $(document).ready(function(){
   });
 
 });
-
-function calculateBtnsWidth(){
-  $("#navbar .btn").each(function(index) {
-    btnsWidth += parseInt($(this).outerWidth(true), 10);
-  });
-}
 
 function parallax(e){
 	var xMouse = e.pageX;
