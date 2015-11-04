@@ -29,6 +29,7 @@ body{
 	background-attachment: fixed;
 	background-size: auto 100%;
 	*/
+	font-size:1.1em;
 }
 
 #bg5{
@@ -72,7 +73,7 @@ body{
 .parallax{
     width: 100%;
     height: 100%;
-    background-image: url(../images/bg3.png), url(../images/bg4.png), url(../images/bg5.png);
+    background: url(../images/bg3.png), url(../images/bg4.png), url(../images/bg5.png);
     background-size: auto 100%;
     background-repeat: repeat-x;
     position: fixed;
