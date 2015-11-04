@@ -285,6 +285,44 @@ body{
 	text-align: justify;
 }
 
+#lightbox{
+	top: 0;
+	width: 100%;
+	height: 0;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	position: fixed;
+	padding: 0 25%;
+  box-sizing: border-box;
+
+
+	-webkit-transition: opacity .6s ease-in-out, height .6s step-end;
+	-moz-transition: opacity .6s ease-in-out, height .6s step-end;
+	-o-transition: opacity .6s ease-in-out, height .6s step-end;
+	transition: opacity .6s ease-in-out, height .6s step-end;
+
+
+}
+
+#lightbox.open {
+  height: 100%;
+  
+  opacity: 1;
+  
+	-webkit-transition: opacity .6s ease-in-out;
+	-moz-transition: opacity .6s ease-in-out;
+	-o-transition: opacity .6s ease-in-out;
+	transition: opacity .6s ease-in-out;
+}
+
+#lightbox img {
+  width: 100%;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+
 #about{
 
 }

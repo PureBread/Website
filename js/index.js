@@ -46,9 +46,10 @@ $(document).ready(function(){
       return false;
   });
 
+  // HTML5 video click to play/pause
   $("#gameplayVideo").on("click", function(e){
     // From: http://stackoverflow.com/questions/5278262/click-the-poster-image-the-html5-video-plays
-    
+
     // get click position 
         var clickY = (e.pageY - $(this).offset().top);
         var height = parseFloat( $(this).height() );
@@ -61,6 +62,15 @@ $(document).ready(function(){
 
   });
 
+  // Lightbox
+  $("img.lightbox").on("click", function(){
+     $("#lightbox img").attr("src", $(this).attr("src"));
+    $("#lightbox").addClass("open");
+  });
+
+  $("#lightbox").on("click", function(){
+     $("#lightbox").removeClass("open");
+  });
 });
 
 function parallax(e){
@@ -78,6 +88,6 @@ function transition(hash){
   if($(hash)){
   	$(".page, .anchor").removeClass("active");
   	$(hash + ", " + hash + "-content").addClass("active");
-    $(window).scrollTop();
+    $(window).scrollTop(0);
   }
 }
