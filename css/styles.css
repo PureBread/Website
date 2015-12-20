@@ -120,6 +120,14 @@ body{
 	padding-bottom: 2.5em;
 	margin: 0;
 }
+#tagline {
+    position: fixed;
+    top: 3em;
+    text-align: center;
+    width: 100%;
+    color: white;
+    letter-spacing: 0.25em;
+}
 
 /*Awesome corner logo things */
 #header h1:before, #header h1:after{
