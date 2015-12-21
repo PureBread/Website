@@ -296,6 +296,10 @@ body{
 	text-align: justify;
 }
 
+.lightbox{
+	cursor: pointer;
+}
+
 #lightbox{
 	top: 0;
 	width: 100%;
@@ -304,7 +308,7 @@ body{
 	opacity: 0;
 	position: fixed;
 	padding: 0 25%;
-  box-sizing: border-box;
+  	box-sizing: border-box;
 
 
 	-webkit-transition: opacity .6s ease-in-out, height .6s step-end;
@@ -340,4 +344,8 @@ body{
 
 #media{
 
+}
+
+#features li{
+	list-style-type: none;
 }
